@@ -14,4 +14,12 @@ const gamesReducer = (state = initState, action) => {
   }
 };
 
+// ACTION CREATOR
+// eslint-disable-next-line no-unused-vars
+const fetchGames = (userData) => {
+  return {
+    type: 'FETCH_GAMES',
+  };
+};
+
 export default gamesReducer;
