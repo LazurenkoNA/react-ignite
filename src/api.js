@@ -24,6 +24,9 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 // Popular Games
 const popularGames = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+const upcomingGames = `games?dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
+const newGames = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-// eslint-disable-next-line import/prefer-default-export
 export const popularGamesURL = () => `${baseURL}${popularGames}`;
+export const upcomingGamesURL = () => `${baseURL}${upcomingGames}`;
+export const newGamesURL = () => `${baseURL}${newGames}`;
