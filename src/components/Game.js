@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import loadDetail from '../actions/detailAction';
 
 const Game = ({ name, released, image, id }) => {
@@ -13,9 +14,11 @@ const Game = ({ name, released, image, id }) => {
 
   return (
     <StyleGame onClick={loadDetailHandler}>
-      <h3>{name}</h3>
-      <p>{released}</p>
-      <img src={image} alt={name} />
+      <Link to={`/games/${id}`}>
+        <h3>{name}</h3>
+        <p>{released}</p>
+        <img src={image} alt={name} />
+      </Link>
     </StyleGame>
   );
 };
