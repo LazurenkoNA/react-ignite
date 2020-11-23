@@ -19,7 +19,6 @@ const currentMonth = getCurrentMonth();
 const currentDay = getCurrentDay();
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
-// eslint-disable-next-line no-unused-vars
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 // Popular Games
@@ -30,3 +29,9 @@ const newGames = `games?dates=${lastYear},${currentDate}&ordering=-released&page
 export const popularGamesURL = () => `${baseURL}${popularGames}`;
 export const upcomingGamesURL = () => `${baseURL}${upcomingGames}`;
 export const newGamesURL = () => `${baseURL}${newGames}`;
+
+// Game Details
+export const gameDetailsURL = (gameID) => `${baseURL}games/${gameID}`;
+
+// Game ScreenShots
+export const gameScreenshotsURL = (gameID) => `${baseURL}games/${gameID}/screenshots`;
