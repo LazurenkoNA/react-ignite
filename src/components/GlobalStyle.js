@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     &::-webkit-scrollbar-thumb {
       background: darkgrey;
     }
-    
+
     &::-webkit-scrollbar-track {
       background: #fff;
     }
@@ -49,9 +49,14 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: #333;
   }
-  
-  img{
+
+  img {
     display: block;
+  }
+
+  input {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
   }
 
 `;
